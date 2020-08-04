@@ -28,7 +28,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 set background=dark
 colorscheme palenight
 
+" Search meu
+set ignorecase
+set smartcase
+set hlsearch
+
+
 let g:ctrlp_working_path_mode = 'c'
+
 
 
 nnoremap <c-n> :NERDTreeToggle<cr>
