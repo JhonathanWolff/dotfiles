@@ -68,4 +68,4 @@ nnoremap <c-f> :Ag<cr>
 nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <c-p> :CtrlP<cr>
 nnoremap <c-s> :w<cr>
-
+"nnoremap <c-enter> :^w v <cr> 
