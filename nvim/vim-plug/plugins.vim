@@ -47,7 +47,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'mhinz/vim-startify'
 	"Python Sintax  erros 
 	"Plug 'dense-analysis/ale'
-
+	
 call plug#end( )
 
 set background=dark
@@ -64,8 +64,16 @@ let g:ctrlp_working_path_mode = 'c'
 let g:ag_working_path_mode='r'
 
 nnoremap <c-f> :Ag<cr>
-
 nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <c-p> :CtrlP<cr>
 nnoremap <c-s> :w<cr>
-"nnoremap <c-enter> :^w v <cr> 
+
+
+nmap <S-Up> v<Up>
+nmap <S-Down> v<Down>
+nmap <S-Left> v<Left>
+nmap <S-Right> v<Right>
+vmap <S-Up> <Up>
+vmap <S-Down> <Down>
+vmap <S-Left> <Left>
+vmap <S-Right> <Right>
