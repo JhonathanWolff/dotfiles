@@ -7,6 +7,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+	
+	"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     	" Better Syntax Support
     	Plug 'sheerun/vim-polyglot'
@@ -20,10 +22,33 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 	Plug 'davidhalter/jedi-vim'
 	
 	Plug 'drewtempelmeyer/palenight.vim'
+
+	Plug 'airblade/vim-gitgutter'
+	
+	Plug 'ryanoasis/vim-devicons'
+	
+	Plug 'Xuyuanp/nerdtree-git-plugin'
+	Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+	Plug 'scrooloose/nerdcommenter'
+
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+	Plug 'junegunn/fzf.vim'
 	
 	Plug 'kien/ctrlp.vim'
+	
+	"Caso de BO com o plugin rode os seguintes codigos
+	"sed -i.bu 's/async=True/**{"async": True}/' ~/.config/nvim/autoload/plugged/nvim-completion-manager/pythonx/cm.py
+	"sed -i.bu 's/async=True/**{"async": True}/' ~/.config/nvim/autoload/plugged/nvim-completion-manager/pythonx/cm_core.py
+	Plug 'roxma/nvim-completion-manager'
 
-    call plug#end( )
+
+	"Pytho sintax highliter
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+
+	"Python Sintax  erros 
+	"Plug 'dense-analysis/ale'
+
+call plug#end( )
 
 set background=dark
 colorscheme palenight
@@ -32,11 +57,12 @@ colorscheme palenight
 set ignorecase
 set smartcase
 set hlsearch
-
+set number
 
 let g:ctrlp_working_path_mode = 'c'
+let g:ag_working_path_mode='r'
 
-
+nnoremap <c-f> :Ag<cr>
 
 nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <c-p> :CtrlP<cr>
