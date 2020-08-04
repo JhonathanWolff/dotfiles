@@ -58,6 +58,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set number
+set hidden
 
 let g:ctrlp_working_path_mode = 'c'
 let g:ag_working_path_mode='r'
@@ -66,3 +67,5 @@ nnoremap <c-f> :Ag<cr>
 
 nnoremap <c-n> :NERDTreeToggle<cr>
 nnoremap <c-p> :CtrlP<cr>
+nnoremap <c-s> :w<cr>
+
