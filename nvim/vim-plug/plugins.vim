@@ -44,7 +44,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 	"Pytho sintax highliter
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-
+	Plug 'mhinz/vim-startify'
 	"Python Sintax  erros 
 	"Plug 'dense-analysis/ale'
 
