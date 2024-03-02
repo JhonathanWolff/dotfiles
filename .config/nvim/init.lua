@@ -6,7 +6,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.showtabline = 2
 vim.opt.clipboard = 'unnamedplus'
-
+vim.opt.mouse="a"
 
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
