@@ -5,11 +5,13 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.showtabline = 2
+vim.opt.clipboard = 'unnamedplus'
 
 
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
 -- sudo apt-get install python3.10-env
+-- nao sei se precisa
 -- sudo apt-get install npm  (for pyright)
 -- sudo apt-get install jedi
 -- sudo apt-get install autopep8
@@ -71,4 +73,15 @@ vim.keymap.set("i", "jk", "<esc>")
 --opt terminal
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm l<CR>")
 
+
+-- debugger keymap
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
+vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
+vim.keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+vim.keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
+vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
+vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
 
