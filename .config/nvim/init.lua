@@ -6,6 +6,7 @@ vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.showtabline = 2
 
+
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
 -- sudo apt-get install python3.10-env
@@ -70,3 +71,5 @@ vim.keymap.set("i", "jk", "<esc>")
 
 --opt terminal
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm l<CR>")
+
+
