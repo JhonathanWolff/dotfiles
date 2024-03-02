@@ -4,6 +4,7 @@ vim.wo.relativenumber = true
 vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
+vim.o.showtabline = 2
 
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
@@ -61,3 +62,11 @@ vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
+
+vim.keymap.set("n", "<S-tab>", ":bprev<CR>")
+vim.keymap.set("n", "<tab>", ":bnext<CR>")
+
+vim.keymap.set("i", "jk", "<esc>")
+
+--opt terminal
+vim.keymap.set("n", "<leader>tt", ":ToggleTerm l<CR>")
