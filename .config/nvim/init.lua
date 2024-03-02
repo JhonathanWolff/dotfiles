@@ -10,7 +10,6 @@ vim.o.showtabline = 2
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
 -- sudo apt-get install python3.10-env
--- nao sei se precisa
 -- sudo apt-get install npm  (for pyright)
 -- sudo apt-get install jedi
 -- sudo apt-get install autopep8
