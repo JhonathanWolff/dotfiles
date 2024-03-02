@@ -1,2 +1,2 @@
 
-dot files para config do vim com Lazy Vim
+dot files para config do NeoVim com Lazy Vim
