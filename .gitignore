@@ -1,3 +1,4 @@
 nvim/autoload/*
 *.json
 *.py
+*.go

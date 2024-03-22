@@ -1,8 +1,10 @@
 #copy and paste this sh file into a sh file on vm and run
 
+
 apt-get install sudo -y
+sudo apt-get install update -y
 sudo apt-get install ninja-build gettext cmake unzip curl git -y
-sudo apt-get install ripgrep
+sudo apt-get install ripgrep wget -y
 
 #dap python + python
 alias python='python3'
@@ -12,10 +14,10 @@ cp ~/.bashrc ~/.backup_bashrc
 echo "alias python='python3'" >> ~/.bashrc
 source ~/.bashrc
 
-sudo apt-get install python3-pip
-sudo apt-get install python3.10-env
-sudo apt-get install autopep8
-sudo apt-get install autopep8
+sudo apt-get install python3-pip -y
+sudo apt-get install python3.10-env -y
+sudo apt-get install autopep8 -y
+sudo apt-get install autopep8 -y
 pip install python-lsp-server
 #---------
 

@@ -8,7 +8,11 @@ return {
 				-- istalled trought mason
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.black,
+				null_ls.builtins.formatting.golines,
 			},
 		})
+
 	end,
+
+
 }
