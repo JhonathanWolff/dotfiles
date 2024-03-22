@@ -5,8 +5,8 @@ vim.o.expandtab = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.o.showtabline = 2
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.mouse="a"
+vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = "a"
 
 -- sudo apt-get install ripgrep
 -- sudo apt-get install python3-pip
@@ -19,14 +19,14 @@ vim.opt.mouse="a"
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -49,11 +49,14 @@ vim.keymap.set("n", "<C-w>", ":q<CR>")
 vim.keymap.set("n", "<leader>w", "vi(")
 vim.keymap.set("n", "<leader>a", "vi{")
 vim.keymap.set("n", "<leader>x", "vi<")
+
 vim.keymap.set("n", "<leader>s", 'vi"')
+vim.keymap.set("n", "J", "}")
+vim.keymap.set("n", "K", "{")
 
 vim.keymap.set("n", "<leader>h", "_")
 vim.keymap.set("n", "<leader>l", "$")
-vim.keymap.set("n", "p", "pgvy")
+vim.keymap.set("v", "p", "pgvy")
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
@@ -73,15 +76,31 @@ vim.keymap.set("i", "jk", "<esc>")
 --opt terminal
 vim.keymap.set("n", "<leader>tt", ":ToggleTerm l<CR>")
 
-
 -- debugger keymap
-vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
-vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
-vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
-vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
-vim.keymap.set('n', '<Leader>b', function() require('dap').toggle_breakpoint() end)
-vim.keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
-vim.keymap.set('n', '<Leader>lp', function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
-vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
-vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
-
+vim.keymap.set("n", "<F5>", function()
+	require("dap").continue()
+end)
+vim.keymap.set("n", "<F10>", function()
+	require("dap").step_over()
+end)
+vim.keymap.set("n", "<F11>", function()
+	require("dap").step_into()
+end)
+vim.keymap.set("n", "<F12>", function()
+	require("dap").step_out()
+end)
+vim.keymap.set("n", "<Leader>b", function()
+	require("dap").toggle_breakpoint()
+end)
+vim.keymap.set("n", "<Leader>B", function()
+	require("dap").set_breakpoint()
+end)
+vim.keymap.set("n", "<Leader>lp", function()
+	require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end)
+vim.keymap.set("n", "<Leader>dr", function()
+	require("dap").repl.open()
+end)
+vim.keymap.set("n", "<Leader>dl", function()
+	require("dap").run_last()
+end)

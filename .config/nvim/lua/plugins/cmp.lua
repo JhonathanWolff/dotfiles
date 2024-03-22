@@ -48,7 +48,6 @@ return {
         end
 
         local luasnip = require("luasnip")
-        local cmp = require("cmp")
 
         cmp.setup({
             mapping = {

@@ -13,7 +13,7 @@ return {
 
 	config = function()
 		require("dapui").setup()
-		require("dap-python").setup("~/.virtualenvs/debugpy/bin/python")
+		require("dap-python").setup("/usr/bin/python3")
 
 		-- config ui
 		local dap, dapui = require("dap"), require("dapui")

@@ -7,17 +7,18 @@ sudo apt-get install ripgrep
 #dap python
 alias python='python3'
 cd ~
-mkdir .virtualenvs
-cd .virtualenvs
-python -m venv debugpy
-debugpy/bin/python -m pip install debugpy
+
+cp ~/.bashrc ~/.backup_bashrc
+echo "alias python='python3'" >> ~/.bashrc
+source ~/.bashrc
 
 # python 
 sudo apt-get install python3-pip
 sudo apt-get install python3.10-env
-#sudo apt-get install npm  (for pyright)
 sudo apt-get install autopep8
-pip install -u jedi-language-server
+sudo apt-get install autopep8
+pip install python-lsp-server
+#---------
 
 git clone https://github.com/neovim/neovim
 cd neovim
