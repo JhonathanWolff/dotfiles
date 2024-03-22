@@ -4,7 +4,7 @@ apt-get install sudo -y
 sudo apt-get install ninja-build gettext cmake unzip curl git -y
 sudo apt-get install ripgrep
 
-#dap python
+#dap python + python
 alias python='python3'
 cd ~
 
@@ -12,7 +12,6 @@ cp ~/.bashrc ~/.backup_bashrc
 echo "alias python='python3'" >> ~/.bashrc
 source ~/.bashrc
 
-# python 
 sudo apt-get install python3-pip
 sudo apt-get install python3.10-env
 sudo apt-get install autopep8
