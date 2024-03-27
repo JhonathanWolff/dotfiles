@@ -2,3 +2,4 @@ nvim/autoload/*
 *.json
 *.py
 *.go
+.config/go/*
