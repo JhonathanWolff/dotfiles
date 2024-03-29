@@ -1,11 +1,12 @@
 #copy and paste this sh file into a sh file on vm and run
+#paste on root
 
 # packages
-apt-get install sudo -y
-sudo apt-get install update -y
-sudo apt-get install ninja-build gettext cmake unzip curl git -y
-sudo apt-get install ripgrep wget -y
-sudo apt-get install npm -y
+apt install sudo -y
+sudo apt install update -y
+sudo apt install ninja-build gettext cmake unzip curl git -y
+sudo apt install ripgrep wget -y
+sudo apt install npm -y
 #----------
 
 #dap python + python
@@ -13,10 +14,10 @@ alias python='python3'
 cd ~
 
 # dependency for python
-sudo apt-get install python3-pip -y
-sudo apt-get install python3.10-env -y
-sudo apt-get install autopep8 -y
-sudo apt-get install autopep8 -y
+sudo apt install python3-pip -y
+sudo apt install python3.10-env -y
+sudo apt install autopep8 -y
+sudo apt install autopep8 -y
 sudo npm install -g pyright
 #---------
 
@@ -54,14 +55,11 @@ cd ~
 # tmux attach --> attach to previous session
 
 cd ~
-sudo apt-get install tmux -y
+sudo apt install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mv ~/vim/tmux.conf ~/tmux.conf
 tmux source-file ~/.tmux.conf
 
-#clear git repository
-cd ~
-rm -rf vim
 
 #set alias
 cd ~
@@ -78,4 +76,27 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
+
+git config --global user.name "DotFiles"
+git config --global user.email "dotfiles@myemail.com"
+
+
+#zsh
+cd ~
+cp ~/dotfiles/.zshrc ~/.zshrc
+source ~/.zshrc
+mkdir ~/.zsh
+cd ~
+sudo apt install zsh-syntax-highlighting -y
+sudo apt install zsh -y
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
+cd zsh-syntax-highlighting/themes/
+cp -v catppuccin_mocha-zsh-syntax-highlighting.zsh ~/.zsh/
+cd ~
+
+#clear git repository
+cd ~
+rm -rf dotfiles
 
