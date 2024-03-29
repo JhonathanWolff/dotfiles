@@ -83,13 +83,13 @@ git config --global user.email "dotfiles@myemail.com"
 
 #zsh
 cd ~
+mkdir ~/.zsh
+sudo apt install zsh -y
+sudo apt install zsh-syntax-highlighting -y
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp ~/dotfiles/.zshrc ~/.zshrc
 source ~/.zshrc
-mkdir ~/.zsh
-cd ~
-sudo apt install zsh-syntax-highlighting -y
-sudo apt install zsh -y
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 git clone https://github.com/catppuccin/zsh-syntax-highlighting.git
 cd zsh-syntax-highlighting/themes/
