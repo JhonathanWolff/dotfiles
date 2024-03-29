@@ -16,8 +16,9 @@ vim.keymap.set("n", "<leader>a", "vi{")
 vim.keymap.set("n", "<leader>x", "vi<")
 
 vim.keymap.set("n", "<leader>s", 'vi"')
-vim.keymap.set("n", "J", "}")
-vim.keymap.set("n", "K", "{")
+
+-- vim.keymap.set("n", "J", "}")
+-- vim.keymap.set("n", "K", "{")
 
 vim.keymap.set("n", "<leader>h", "_")
 vim.keymap.set("n", "<leader>l", "$")

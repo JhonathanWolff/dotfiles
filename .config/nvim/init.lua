@@ -1,3 +1,6 @@
+--vim.api.nvim_create_autocmd("set nohlsearch")
+vim.cmd("set nohlsearch")
+
 vim.g.mapleader = " "
 vim.wo.relativenumber = true
 
