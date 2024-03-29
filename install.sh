@@ -31,10 +31,8 @@ make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
 
 cd ~
-git clone https://github.com/JhonathanWolff/vim.git
 mkdir ~/.config
-cp  -r ~/vim/.config/* ~/.config
-cd ~
+cp  -r ~/dotfiles/.config/* ~/.config
 # ---- install vim
 
 # install tmux
