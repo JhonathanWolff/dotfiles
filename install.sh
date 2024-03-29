@@ -18,6 +18,7 @@ sudo apt install python3-pip -y
 sudo apt install python3.10-env -y
 sudo apt install autopep8 -y
 sudo apt install autopep8 -y
+sudo apt install jq -y
 
 sudo npm cache clean -f
 sudo npm install -g n
