@@ -5,6 +5,7 @@ apt-get install sudo -y
 sudo apt-get install update -y
 sudo apt-get install ninja-build gettext cmake unzip curl git -y
 sudo apt-get install ripgrep wget -y
+sudo apt-get install npm -y
 #----------
 
 #dap python + python
@@ -16,7 +17,7 @@ sudo apt-get install python3-pip -y
 sudo apt-get install python3.10-env -y
 sudo apt-get install autopep8 -y
 sudo apt-get install autopep8 -y
-pip install python-lsp-server
+sudo npm install -g pyright
 #---------
 
 
@@ -70,4 +71,11 @@ echo "alias TMUX_CONFIG=\"nvim ~/.tmux.conf\"" >> ~/.bashrc
 echo "alias python='python3'" >> ~/.bashrc
 source ~/.bashrc
 
+
+# lazy git
+cd ~
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf lazygit.tar.gz lazygit
+sudo install lazygit /usr/local/bin
 
