@@ -1,2 +1,6 @@
 
-dot files para config do NeoVim com Lazy Vim
+dot files configs
+
+cp install.sh --> ~/
+sh install.sh
+
