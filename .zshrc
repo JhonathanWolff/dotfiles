@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:/usr/local/go/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -106,11 +107,13 @@ bindkey -v
 alias TMUX_CONFIG="nvim ~/.tmux.conf"
 alias COPY_CONFIG="cp -r ~/.config /mnt/c/Users/jhonathan/Documents/vim && cp -r ~/.tmux.conf /mnt/c/Users/jhonathan/Documents/vim"
 alias VIM_CONFIG="cd ~/.config/nvim && nvim init.lua"
-alias ZSH_CONFIG="nvim ~/.zshrc"
+alias gor="go run"
 
 
 #source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 #source ~/.zsh/zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export TERM=screen-256color
+
 
 
